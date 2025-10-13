@@ -103,7 +103,7 @@ input[type=number] {
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
-  color: #101010; /* darker text for contrast */
+  color: #fff; /* <- changed from dark to white for visibility */
   background: rgba(255, 215, 95, 0.2); /* bright golden background */
   border-left: 0.3rem solid #f1c40f;
   padding: 1rem;
@@ -125,3 +125,4 @@ input[type=number] {
     font-size: 1.5rem;
   }
 }
+

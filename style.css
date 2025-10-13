@@ -104,13 +104,13 @@ input[type=number] {
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
-  color: #fff; /* white text */
-  background: rgba(255, 255, 255, 0.1); /* slightly stronger for readability */
+  color: #ffffff !important; /* force pure white */
+  background: rgba(30, 30, 30, 0.8); /* darker solid background so text is readable */
   border-left: 0.3rem solid #f1c40f;
   padding: 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0 0.5rem rgba(241, 196, 15, 0.2); /* slightly stronger shadow */
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); /* add subtle text shadow for contrast */
+  box-shadow: 0 0 0.5rem rgba(241, 196, 15, 0.3);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* makes text clearly visible */
   transition: all 0.3s ease;
 }
 
@@ -129,4 +129,5 @@ input[type=number] {
     font-size: 1.5rem;
   }
 }
+
 

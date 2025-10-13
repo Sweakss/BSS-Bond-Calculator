@@ -28,6 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
       startLevel >= targetLevel
     ) {
       resultEl.innerText = "⚠️ Please enter valid numbers. Target level must be higher than start level.";
+      resultEl.style.color = "#e0e0e0"; // force soft white
       return;
     }
 
@@ -50,3 +51,4 @@ window.addEventListener("DOMContentLoaded", () => {
   // Initial calculation on page load
   calculate();
 });
+

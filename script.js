@@ -21,8 +21,8 @@ function calculate() {
   const bonusPercent = parseInt(document.getElementById("bonus").value);
   const resultEl = document.getElementById("result");
 
-  if (isNaN(startLevel) || isNaN(targetLevel) || startLevel >= targetLevel) {
-    resultEl.innerText = "⚠️ Target level must be higher than start level.";
+  if (isNaN(startLevel) || isNaN(targetLevel) || isNaN(numBees) || isNaN(bonusPercent) || startLevel >= targetLevel) {
+    resultEl.innerText = "⚠️ Please enter valid numbers. Target level must be higher than start level.";
     return;
   }
 

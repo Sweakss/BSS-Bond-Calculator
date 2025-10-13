@@ -44,9 +44,9 @@ window.addEventListener("DOMContentLoaded", () => {
     resultEl.innerText = `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} → ${targetLevel} with ${bonusPercent}% bonus.`;
   }
 
-  // Update result when inputs change
+  // Add event listeners to all inputs for live updating
   document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculate));
 
-  // Initial calculation
+  // Initial calculation on page load
   calculate();
 });

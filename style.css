@@ -104,8 +104,8 @@ input[type=number] {
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
-  color: #fff !important; /* force white text */
-  -webkit-text-fill-color: #fff; /* explicitly set for Chrome/Safari */
+  color: #f5f5f5 !important; /* force white text */
+  -webkit-text-fill-color: #f5f5f5; /* explicitly set for Chrome/Safari */
   background: rgba(255,255,255,0.05);
   border-left: 0.3rem solid #f1c40f;
   padding: 1rem;
@@ -129,6 +129,7 @@ input[type=number] {
     font-size: 1.5rem;
   }
 }
+
 
 
 

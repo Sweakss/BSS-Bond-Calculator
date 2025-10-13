@@ -1,5 +1,42 @@
 <div class="container">
-  <h1>🐝 Bee Swarm Simulator Bond Calculator 🐝</h1>
+  <h1><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee Swarm Simulator Bond Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🐝 Bee Swarm Simulator Bond Calculator 🐝</h1>
+
+    <div class="field">
+      <label for="startLevel">Start Level</label>
+      <input type="number" id="startLevel" min="1" max="25" value="20" />
+    </div>
+
+    <div class="field">
+      <label for="targetLevel">Target Level</label>
+      <input type="number" id="targetLevel" min="2" max="25" value="21" />
+    </div>
+
+    <div class="field">
+      <label for="numBees">Number of Bees</label>
+      <input type="number" id="numBees" min="1" max="50" value="1" />
+    </div>
+
+    <div class="field">
+      <label for="bonus">Bee Bond Bonus (%)</label>
+      <input type="number" id="bonus" min="100" max="130" value="130" />
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html></h1>
 
   <div class="field">
     <label for="startLevel">Start Level</label>
@@ -22,4 +59,5 @@
   </div>
 
   <div id="result"></div>
+
 </div>

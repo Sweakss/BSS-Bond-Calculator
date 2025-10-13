@@ -1,4 +1,9 @@
-const bondTable = [ 0, 10, 40, 200, 750, 4000, 15000, 60000, 270000, 450000, 1200000, 2000000, 4000000, 7000000, 15000000, 120000000, 450000000, 1900000000, 7500000000, 15000000000, 475000000000, 4500000000000, 95000000000000, 5000000000000000, 95000000000000000 ];
+const bondTable = [
+  0, 10, 40, 200, 750, 4000, 15000, 60000, 270000, 450000, 1200000, 2000000,
+  4000000, 7000000, 15000000, 120000000, 450000000, 1900000000, 7500000000,
+  15000000000, 475000000000, 4500000000000, 95000000000000,
+  5000000000000000, 95000000000000000
+];
 
 function formatNumber(num) {
   if (num >= 1e15) return (num / 1e15).toFixed(2) + " quadrillion";
@@ -14,15 +19,16 @@ function calculate() {
   const targetLevel = parseInt(document.getElementById("targetLevel").value);
   const numBees = parseInt(document.getElementById("numBees").value);
   const bonusPercent = parseInt(document.getElementById("bonus").value);
+  const resultEl = document.getElementById("result");
 
-  if (startLevel >= targetLevelLevel) {
-    document.getElementById("result").innerText = "End level must be higher than start level.";
+  if (isNaN(startLevel) || isNaN(targetLevel) || startLevel >= targetLevel) {
+    resultEl.innerText = "⚠️ Target level must be higher than start level.";
     return;
   }
 
   let totalBond = 0;
-  for (let i = startLevel; i < targetLevelLevel; i++) {
-    totalBond += bondTable[i];
+  for (let i = startLevel; i < targetLevel; i++) {
+    totalBond += bondTable[i] || 0;
   }
 
   const effectiveBondPerTreat = 10 * (bonusPercent / 100);
@@ -30,7 +36,14 @@ function calculate() {
   const honeyPerBee = treatsNeeded * 10000;
   const totalHoney = honeyPerBee * numBees;
 
-  document.getElementById("result").innerText =
-    `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} to ${targetLevel} with ${bonusPercent}% bonus.`;
-
+  resultEl.innerText =
+    `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} → ${targetLevel} with ${bonusPercent}% bonus.`;
 }
+
+// Auto-update when inputs change
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", calculate);
+});
+
+// Initial calculation
+window.addEventListener("DOMContentLoaded", calculate);

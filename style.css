@@ -104,14 +104,16 @@ input[type=number] {
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
-  color: #fff; /* ensures text is white */
-  background: rgba(255,255,255,0.05);
+  color: #fff; /* white text */
+  background: rgba(255, 255, 255, 0.1); /* slightly stronger for readability */
   border-left: 0.3rem solid #f1c40f;
   padding: 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0 0.5rem rgba(241,196,15,0.15);
+  box-shadow: 0 0 0.5rem rgba(241, 196, 15, 0.2); /* slightly stronger shadow */
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); /* add subtle text shadow for contrast */
   transition: all 0.3s ease;
 }
+
 
 #result:hover {
   box-shadow: 0 0 1rem rgba(255,215,95,0.4);
@@ -127,3 +129,4 @@ input[type=number] {
     font-size: 1.5rem;
   }
 }
+

@@ -11,17 +11,17 @@ function formatNumber(num) {
 
 function calculate() {
   const startLevel = parseInt(document.getElementById("startLevel").value);
-  const endLevel = parseInt(document.getElementById("endLevel").value);
+  const targetLevel = parseInt(document.getElementById("targetLevel").value);
   const numBees = parseInt(document.getElementById("numBees").value);
   const bonusPercent = parseInt(document.getElementById("bonus").value);
 
-  if (startLevel >= endLevel) {
+  if (startLevel >= targetLevelLevel) {
     document.getElementById("result").innerText = "End level must be higher than start level.";
     return;
   }
 
   let totalBond = 0;
-  for (let i = startLevel; i < endLevel; i++) {
+  for (let i = startLevel; i < targetLevelLevel; i++) {
     totalBond += bondTable[i];
   }
 
@@ -31,5 +31,6 @@ function calculate() {
   const totalHoney = honeyPerBee * numBees;
 
   document.getElementById("result").innerText =
-    `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} to ${endLevel} with ${bonusPercent}% bonus.`;
+    `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} to ${targetLevel} with ${bonusPercent}% bonus.`;
+
 }

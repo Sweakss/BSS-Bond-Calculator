@@ -20,8 +20,8 @@ body {
 
 /* -------- CONTAINER -------- */
 .container {
-  background: rgba(30, 30, 30, 0.75); /* slightly stronger for better backdrop */
-  backdrop-filter: blur(12px);        /* works in most modern browsers */
+  background: rgba(30, 30, 30, 0.75); /* dark glass effect */
+  backdrop-filter: blur(15px);
   border-radius: 24px;
   padding: 2.5rem 2rem;
   width: 100%;
@@ -31,7 +31,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Container hover glow without :has() */
 .container:hover {
   transform: translateY(-0.2rem);
   box-shadow: 0 0 50px rgba(241, 196, 15, 0.3);
@@ -76,16 +75,16 @@ input {
   color: #f0f0f0;
   border-radius: 1rem;
   outline: none;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
 
 input:focus {
   border-color: #ffd75f;
-  box-shadow: 0 0 1rem rgba(255,215,95,0.5), inset 0 2px 6px rgba(0,0,0,0.3);
-  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 1rem rgba(255, 215, 95, 0.5), inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Remove number spinners */
@@ -104,18 +103,17 @@ input[type=number] {
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
-  color: #fff;
-  background: rgba(255,255,255,0.05);
+  color: #101010; /* darker text for contrast */
+  background: rgba(255, 215, 95, 0.2); /* bright golden background */
   border-left: 0.3rem solid #f1c40f;
   padding: 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0 0.5rem rgba(241,196,15,0.15);
+  box-shadow: 0 0 1rem rgba(241, 196, 15, 0.3);
   transition: all 0.3s ease;
 }
 
-/* Result hover glow */
 #result:hover {
-  box-shadow: 0 0 1rem rgba(255,215,95,0.4);
+  box-shadow: 0 0 1.5rem rgba(255, 215, 95, 0.5);
 }
 
 /* -------- RESPONSIVE -------- */

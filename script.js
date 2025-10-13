@@ -42,7 +42,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const honeyPerBee = treatsNeeded * 10000;
     const totalHoney = honeyPerBee * numBees;
 
-    resultEl.innerText = `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} → ${targetLevel} with ${bonusPercent}% bonus.`;
+resultEl.innerText = `You need approximately ${formatNumber(totalHoney)} honey to level ${numBees} bee(s) from level ${startLevel} → ${targetLevel} with ${bonusPercent}% bonus.`;
+resultEl.style.color = "#e0e0e0"; // force soft white
   }
 
   // Add event listeners to all inputs for live updating
@@ -51,4 +52,5 @@ window.addEventListener("DOMContentLoaded", () => {
   // Initial calculation on page load
   calculate();
 });
+
 

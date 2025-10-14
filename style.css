@@ -72,7 +72,7 @@ input {
   font-family: "Inter", "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #e0e0e0; /* default soft white text */
+  color: #e0e0e0 !important; /* default soft white text */
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
@@ -84,4 +84,6 @@ input {
 /* Focus effect for input: gold text */
 input:focus {
   border-color: #ffd75f;
+  color: #ffd75f
   box-shadow:
+

@@ -7,6 +7,8 @@ window.addEventListener("DOMContentLoaded", () => {
   ];
 
   function formatNumber(num) {
+    if (num >= 1e21) return (num / 1e21).toFixed(2) + " sextillion";
+    if (num >= 1e18) return (num / 1e18).toFixed(2) + " quintillion";
     if (num >= 1e15) return (num / 1e15).toFixed(2) + " quadrillion";
     if (num >= 1e12) return (num / 1e12).toFixed(2) + " trillion";
     if (num >= 1e9) return (num / 1e9).toFixed(2) + " billion";
@@ -52,5 +54,6 @@ resultEl.style.color = "#e0e0e0"; // force soft white
   // Initial calculation on page load
   calculate();
 });
+
 
 

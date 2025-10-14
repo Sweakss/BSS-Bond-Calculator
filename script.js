@@ -54,6 +54,3 @@ resultEl.style.color = "#e0e0e0"; // force soft white
   // Initial calculation on page load
   calculate();
 });
-
-
-
